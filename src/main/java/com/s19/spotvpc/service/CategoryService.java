@@ -1,11 +1,11 @@
 package com.s19.spotvpc.service;
 
 import java.util.List;
-import java.util.Locale.Category;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.s19.spotvpc.model.Category;
 import com.s19.spotvpc.repository.CategoryRepository;
 
 @Service
@@ -24,9 +24,9 @@ public class CategoryService {
 	       return result;
 	}
 
-	public void deleteCategory(int categoryId) {
-		categoryRepository.deleteById(categoryId);
-	}
+//	public void deleteCategory(int categoryId) {
+//		categoryRepository.deleteById(categoryId);
+//	}
 
 	public void updateCategory(Category category, int categoryId) {
 	
@@ -34,20 +34,20 @@ public class CategoryService {
 		categoryRepository.save(category);
 	}
 
-	public Category getCategoryById(int id) {
-		Category category=null;
-		try {
-			category=this.categoryRepository.findByCategoryId(id);
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		return category;
-	}
+//	public Category getCategoryById(int id) {
+//		Category category=null;
+//		try {
+//			category=this.categoryRepository.findByCategoryId(id);
+//		}
+//		catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		return category;
+//	}
 
-	public Category getCategoryByName(String name) {
-		Category category=this.categoryRepository.findByCategoryName(name);
-		return category;
-	}
+//	public Category getCategoryByName(String name) {
+//		Category category=this.categoryRepository.findByCategoryName(name);
+//		return category;
+//	}
 
 }
